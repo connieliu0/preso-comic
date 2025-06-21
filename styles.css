@@ -14,7 +14,6 @@ body {
 .content-box {
     width: 100%;
     flex: 1;
-    background-color: #dc2626;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,7 +50,7 @@ body {
 .caption {
     flex: 1;
     text-align: center;
-    font-size: 18px;
+    font-size: 30px;
     color: #333;
     margin: 0 20px;
 }
@@ -86,4 +85,40 @@ body {
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 14px;
+}
+
+.external-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.external-link:hover {
+    background-color: #555;
+}
+
+.instagram-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.instagram-container iframe {
+    border: none;
+    width: 100%;
+    min-height: 450px;
+}
+
+.figma-link {
+    background-color: #1abcfe !important;
+}
+
+.figma-link:hover {
+    background-color: #0098e1 !important;
 }
