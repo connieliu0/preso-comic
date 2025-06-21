@@ -26,6 +26,12 @@ function renderSlide(index) {
     const slide = slides[index];
     contentBox.innerHTML = '';
     
+    // Add URL display for all types
+    const urlDisplay = document.createElement('div');
+    urlDisplay.className = 'url-display';
+    urlDisplay.textContent = slide.src;
+    contentBox.appendChild(urlDisplay);
+    
     if (slide.type === 'image') {
         const img = document.createElement('img');
         // Convert Google Drive link to direct image link
@@ -76,7 +82,7 @@ function renderSlide(index) {
                     // Keep the link as fallback if oEmbed fails
                     console.log('Instagram embed failed, falling back to link');
                 });
-        }  else {
+        } else {
             const iframe = document.createElement('iframe');
             iframe.src = slide.src;
             iframe.title = slide.caption;
